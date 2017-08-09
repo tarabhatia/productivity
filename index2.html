@@ -9,7 +9,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <title>Story by HTML5 UP</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="main2.css"/>
+<link rel="stylesheet" href="assets/css/main.css" />
+
+
+
+
+
+
 </head>
 <body>
 
@@ -20,10 +26,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 <div class="content">
 <h1>To Do List</h1>
-<html>
+
 <style>
-<h> Productivity Pacifier</h>
-<style>
+
+
 
 body {
   margin: 0;
@@ -143,124 +149,184 @@ input {
   background-color: #bbb;
 }
 </style>
-</head>
-<body>
+
 
 <div id="myDIV" class="header">
   <input type="text" id="myInput" placeholder="Enter task...">
   <span onclick="newElement()" class="addBtn">Add</span>
 </div>
 
-<ul id="myUL">
-  <!-- <li onclick="  document.getElementById('0percent').src='33percent.png';">Hit the gym</li>
-  <li onclick=" document.getElementById('0percent').src='33percent.png';"> Meet George</li>
-  <li onclick="  document.getElementById('0percent').src='33percent.png';">Buy eggs</li> -->
-</ul>
-
-<ul id="User">
-</ul>
+<ul id="User"></ul>
 
 
 <script>
 // Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN"); /*what is span?*/
-  var txt = document.createTextNode("\u00D7"); /*what is \u00d7?*/
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
+// var myNodelist = document.getElementsByTagName("LI");
+// var i;
+// for (i = 0; i < myNodelist.length; i++) {
+//   var span = document.createElement("SPAN"); /*what is span?*/
+//   var txt = document.createTextNode("\u00D7"); /*what is \u00d7?*/
+//   span.className = "close";
+//   span.appendChild(txt);
+//   myNodelist[i].appendChild(span);
+// }
 
 
 // Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) { /*when you click on the task, it puts a check mark and hides the text*/
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none"; /*hides the text of the task*/
-  }
-}
+// var close = document.getElementsByClassName("close");
+// var i;
+// for (i = 0; i < close.length; i++) { /*when you click on the task, it puts a check mark and hides the text*/
+//   close[i].onclick = function() {
+//     var div = this.parentElement;
+//     div.style.display = "none"; /*hides the text of the task*/
+//   }
+// }
 
 // Add a "checked" symbol when clicking on a list item
 
 
 // Create a new list item when clicking on the "Add" button
-var checkMark=0;
+// var checkMark=0;
+//
+// function myfunc2(){
+//   // if (unchecked == 0){
+//   checkMark ++;
+//   if (checkMark == 1){
+//     document.getElementById('0percent').src="alertcrying.jpg";}
+//   if (checkMark == 2){
+//     document.getElementById('0percent').src="alert66percent.jpg";}
+//   if (checkMark == 3){
+//     document.getElementById('0percent').src="alert100percent.jpg";}
+//   // return 1;
+//   // }
+//   // else:
+//   // // reverse image process
+//   // unchecked = 0
+//
+// }
+//
+// function reverse_img(){
+//   checkMark -=2;
+//   myfunc2();
+// }
+//
+// function newElement() {
+//   // var li = document.createElement("li");
+//   // var inputValue = document.getElementById("myInput").value; /*gets inout from user*/
+//   // var t = document.createTextNode(inputValue);
+//   // li.appendChild(t);
+//   // if (inputValue === '') { /*alerts if there is no inout*/
+//   //   alert("You must write something!");
+//   // } else {
+//   //   document.getElementById("myUL").appendChild(li); /*adds to the new changed list*/
+//   // }
+//     var list_el =
+//   document.getElementById('myInput').value;
+//     document.getElementById('User').innerHTML =
+//   document.getElementById('User').innerHTML + '<li id = "blah" ></li>';
+//         document.getElementById('blah').innerHTML = list_el;
+//         document.getElementById('blah').id='';
+//         // var list = document.querySelector('ul');
+//         document.getElementById('User').addEventListener('click', function(ev) { /*when list is clicked, the item is checked*/
+//           if (ev.target.tagName == 'LI') {
+//             if (ev.target.classList != 'checked'){
+//               ev.target.classList.toggle('checked');
+//               myfunc2();
+//             }
+//             // if (ev.target.id !='clicked'&&
+//             //     ev.target.classList == 'checked'){
+//             //       // var unchecked = 0;
+//             //       // unchecked = myfunc2(unchecked);
+//             //       // ev.target.id = 'clicked';
+//             //       // if (unchecked == 1) {
+//             //       //   ev.target.classList.toggle('checked')
+//             //       //   ev.target.id = ''
+//             //       ev.target.id = 'clicked';
+//             //       // }
+//             //     }
+//             if (ev.target.classList == 'checked'){
+//                   reverse_img();
+//                   ev.target.classList.toggle('checked');
+//             }
+//           }
+//         });
+//
+//
+//
+//
+//
+//
+//   document.getElementById("myInput").value = "";
+//
+//   // var span = document.createElement("SPAN"); /* span */
+//   // var txt = document.createTextNode("\u00D7");
+//   // span.className = "close";
+//   // span.appendChild(txt);
+//   // li.appendChild(span);
+//   //
+//   // for (i = 0; i < close.length; i++) {
+//   //   close[i].onclick = function() {
+//   //     var div = this.parentElement;
+//   //     div.style.display = "none";
+//   //   }
+//   // }
+// }
+</script>
+
+<script>
+var checkMark = 0;
+
+function reverse_img(){
+  checkMark -=2;
+  if (checkMark < 0) {
+  checkMark = 0;}
+  myfunc2();
+}
 
 function myfunc2(){
   checkMark ++;
   if (checkMark == 1){
-    document.getElementById('0percent').src="33percent.png";}
+    document.getElementById('0percent').src="alertcrying.jpg";}
   if (checkMark == 2){
-    document.getElementById('0percent').src="66percent.png";}
+    document.getElementById('0percent').src="alert66percent.jpg";}
   if (checkMark == 3){
-    document.getElementById('0percent').src="100percent.png";}
-
+    document.getElementById('0percent').src="alert100percent.jpg";}
 }
 
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI'){
+    ev.target.classList.toggle('checked');
+    if (ev.target.classList == 'checked'){
+      myfunc2();
+    }
+    else{
+      reverse_img();
+    }
+  }
+}, false);
+
 function newElement() {
-  // var li = document.createElement("li");
-  // var inputValue = document.getElementById("myInput").value; /*gets inout from user*/
-  // var t = document.createTextNode(inputValue);
-  // li.appendChild(t);
-  // if (inputValue === '') { /*alerts if there is no inout*/
-  //   alert("You must write something!");
-  // } else {
-  //   document.getElementById("myUL").appendChild(li); /*adds to the new changed list*/
-  // }
-    var list_el =
-  document.getElementById('myInput').value;
-    document.getElementById('User').innerHTML =
-  document.getElementById('User').innerHTML + '<li id = "blah" ></li>';
-        document.getElementById('blah').innerHTML = list_el;
-        document.getElementById('blah').id='';
-        // var list = document.querySelector('ul');
-        document.getElementById('User').addEventListener('click', function(ev) { /*when list is clicked, the item is checked*/
-          if (ev.target.tagName == 'LI') {
-            if (ev.target.classList != 'checked'){
-              ev.target.classList.toggle('checked')
-            }
-            if (ev.target.id !='clicked'&&
-                ev.target.classList == 'checked'){
-                  myfunc2();
-                  ev.target.id = 'clicked';
-                }
-          }
-        });
-
-
-
-
-
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value; /*gets inout from user*/
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') { /*alerts if there is no inout*/
+    alert("You must write something!");
+  } else {
+    document.getElementById("User").appendChild(li); /*adds to the new changed list*/
+  }
 
   document.getElementById("myInput").value = "";
 
-  // var span = document.createElement("SPAN"); /* span */
-  // var txt = document.createTextNode("\u00D7");
-  // span.className = "close";
-  // span.appendChild(txt);
-  // li.appendChild(span);
-  //
-  // for (i = 0; i < close.length; i++) {
-  //   close[i].onclick = function() {
-  //     var div = this.parentElement;
-  //     div.style.display = "none";
-  //   }
-  // }
 }
 </script>
 
-</body>
-</html>
 
 </div>
 <div class="image">
-<img id = "0percent" src="0percent.png" alt="" />
+<img id = "0percent" src="cryingbaby.jpg" alt="" />
 </div>
-</section>
 
 
 
